@@ -1,0 +1,30 @@
+{
+  "name": "courses",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": "Yan",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picturepan2/courses.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/picturepan2/courses/issues"
+  },
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo"
+  },
+  "devDependencies": {
+    
+  },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "Edge >= 12",
+    "Firefox ESR",
+    "last 4 Safari versions",
+    "last 4 Opera versions",
+    "Explorer >= 10"
+  ]
+}

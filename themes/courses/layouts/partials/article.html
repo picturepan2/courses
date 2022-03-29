@@ -1,0 +1,9 @@
+<a class="near-item card" href="{{ .Permalink }}" target="_blank" title="{{ .Title }}">
+  <div class="card-image">
+    <img class="img-responsive" src="{{ .Params.cover }}" alt="{{ .Title }} - {{ .Description }}" loading="lazy">
+  </div>
+  <div class="card-header">
+    <div class="card-title mb-2">{{ .Title }}</div>
+    <div class="card-subtitle text-gray">{{ .Description }}</div>
+  </div>
+</a>

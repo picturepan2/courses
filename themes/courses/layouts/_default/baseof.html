@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <input type="checkbox" id="near-switch" class="near-switch" name="near-switch" hidden>
+    <div class="near-bg"></div>
+    <div class="near-container">
+      {{ partial "header.html" . }}
+      
+      <main class="section-main">
+        {{ block "main" . }}
+  
+        {{ end }}
+      </main>
+      
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+
+  <!-- <script async src='{{ "/js/app.js" | absURL }}'></script> -->
+</html>

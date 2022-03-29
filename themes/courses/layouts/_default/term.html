@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="container grid-xl">
+    <div class="columns">
+      <div class="hero-container column col-md-12">
+        <div class="courses-hero">
+          <div class="hero-content">
+            <h1 class="hero-title">{{ .Title }}</h1>
+            <h2 class="hero-subtitle">{{ .Title }} projects building on NEAR ecosystem.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="aside-container column">
+        {{ partial "aside.html" . }}
+      </div>
+      <div class="content-container column col-9 col-md-12">
+        <div class="near-content">
+          <div class="near-list-container columns">
+            {{ range .Pages.ByWeight.Reverse }}
+              <div class="column col-4 col-lg-6 col-sm-12">
+                {{ partial "project.html" . }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

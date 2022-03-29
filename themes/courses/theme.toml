@@ -1,0 +1,12 @@
+# theme.toml template for a Hugo theme
+
+name = "courses"
+license = "MIT"
+licenselink = "https://github.com/picturepan2/courses"
+description = "A simple Start Page theme"
+tags = ["speed-dial", "single-page", "responsive", "one-page", "offline"]
+min_version = "0.38.1"
+
+[author]
+  name = "Yan"
+  homepage = "https://twitter.com/picturepan2"

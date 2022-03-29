@@ -1,0 +1,20 @@
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta charset="utf-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content='{{ if (isset .Params "logo") }}{{.Site.BaseURL}}{{.Params.logo}}{{ else if (isset .Params "cover") }}{{.Site.BaseURL}}{{.Params.cover}}{{ else }}{{ "/img/courses-social.jpg" | absURL }}{{ end }}'>
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="website">
+<meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}">
+<meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+<meta itemprop="image" content='{{ if (isset .Params "logo") }}{{.Site.BaseURL}}{{.Params.logo}}{{ else if (isset .Params "cover") }}{{.Site.BaseURL}}{{.Params.cover}}{{ else }}{{ "/img/courses-social.jpg" | absURL }}{{ end }}'>
+<meta name="theme-color" content="#0052cc">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="shortcut icon" type="image/png" href='{{ "/img/favicon.png" | absURL }}'>
+{{ $courses := resources.Get "scss/courses.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+<link rel="stylesheet" href="{{ $courses.Permalink }}">

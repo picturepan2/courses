@@ -1,0 +1,12 @@
+.idea/
+*.DS_Store
+node_modules/
+public/
+.*
+!.csscomb.json
+!.env
+!.gitignore
+!.gitattributes
+!.hound.yml
+!.scss-lint.yml
+!.well-known

@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="container grid-lg">
+    <div class="columns">
+      <div class="hero-container column col-md-12">
+        <div class="near-hero">
+          <div class="hero-content">
+            <h1 class="hero-title">{{ .Title }}</h1>
+          </div>
+          {{ partial "search.html" . }}
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="content-container column col-md-12">
+        <div class="near-content">
+          <div class="near-list-container columns">
+            {{ range .Site.Taxonomies.categories }}
+              <div class="column col-4 col-lg-6 col-md-12">
+                <a href="{{ .Page.Permalink }}" class="near-item tile" title="{{ .Page.Title }}">
+                  <div class="tile-content">
+                    <h2 class="tile-title">{{ .Page.Title }}</h2>
+                    <h3 class="tile-subtitle text-gray">{{ .Count }} {{ if gt .Count 1 }}projects{{ else }}project{{ end }}</h3>
+                  </div>
+                </a>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
