@@ -1,8 +1,53 @@
 {{ define "main" }}
-  <div class="container grid-xl">
-    <div class="columns">
+<div class="hero-container text-center" id="hero">
+  <div class="container grid-sm">
+    <small class="label label-primary">{{ .Params.Series }}</small>
+    <h1>{{ .Title }}</h1>
+    <div class="course-menu">
+      <a class="course-menu-item" href="#hero">课程简述</a>
+      <a class="course-menu-item" href="#info">课程信息</a>
+      <a class="course-menu-item" href="#schedules">课程大纲</a>
     </div>
-
-    
+    <h2>课程简述</h2>
+    <div class="content">{{ .Content }}</div>
   </div>
+</div>
+
+<div class="info-container text-center" id="info">
+  <div class="container grid-md">
+    <h2>课程信息</h2>
+    <div class="course-meta">
+      <div class="course-meta-item">
+        <div class="course-meta-header">主讲人</div>
+        <h3 class="course-meta-content">{{ .Params.info.instructor }}</h3>
+      </div>
+      <div class="course-meta-item">
+        <div class="course-meta-header">地点</div>
+        <h3 class="course-meta-content">{{ .Params.info.location }}</h3>
+      </div>
+      <div class="course-meta-item">
+        <div class="course-meta-header">日期</div>
+        <h3 class="course-meta-content">{{ .Params.info.date }}</h3>
+      </div>
+      <div class="course-meta-item">
+        <div class="course-meta-header">参与方式</div>
+        <h3 class="course-meta-content">{{ .Params.info.how }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="schedule-container text-center" id="schedules">
+  <div class="container grid-sm">
+    <h2>课程大纲</h2>
+    <div class="course-schedule">
+      {{ range $elem_index, $elem_val := .Params.schedules }}
+        <div class="course-schedule-item">
+          <div class="label label-primary">{{ $elem_val.time }}</div>
+          <h3 class="course-schedule-header">{{ $elem_val.title }}</h3>
+          <div class="course-schedule-content">{{ $elem_val.content | markdownify }}</div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
 {{ end }}

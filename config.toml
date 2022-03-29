@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'zh-hans'
+title = '初链那件小事 - INS 国际讲座系列 #21'
 theme = "courses"
 canonifyurls = true
 disableHugoGeneratorInject = true

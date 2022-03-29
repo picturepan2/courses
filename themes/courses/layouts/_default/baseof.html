@@ -4,16 +4,11 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <input type="checkbox" id="near-switch" class="near-switch" name="near-switch" hidden>
-    <div class="near-bg"></div>
-    <div class="near-container">
-      {{ partial "header.html" . }}
+    <div class="courses-container">
+      <!-- {{ partial "header.html" . }} -->
       
-      <main class="section-main">
-        {{ block "main" . }}
-  
-        {{ end }}
-      </main>
+      {{ block "main" . }}
+      {{ end }}
       
       {{ partial "footer.html" . }}
     </div>

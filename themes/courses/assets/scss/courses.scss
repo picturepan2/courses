@@ -32,4 +32,143 @@
 @import "animations";
 @import "utilities";
 
-/*! courses | MIT License */
+/*! Courses | MIT License */
+.courses-container {
+  background: #FEFEFE;
+  min-height: 100vh;
+  padding-left: .8rem;
+  padding-right: .8rem;
+  width: 100vw;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-container {
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+
+    .course-menu {
+      background: $light-color;
+      border-radius: $border-radius-lg;
+      box-shadow: 0 .2rem 2rem rgba($dark-color, .1);
+      display: inline-flex;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      padding: .4rem;
+      position: sticky;
+      top: .4rem;
+
+      .course-menu-item {
+        padding: .4rem .6rem;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          background: $bg-color;
+          border-radius: .6rem;
+        }
+      }
+    }
+  }
+
+  .info-container {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    .course-meta {
+      display: flex;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+
+      .course-meta-item {
+        border: .05rem solid $border-color;
+        flex: 1 1 0;
+        text-align: left;
+        padding: 1.2rem;
+
+        &:first-child {
+          border-bottom-left-radius: $border-radius-lg;
+          border-top-left-radius: $border-radius-lg;
+        }
+
+        &:not(:first-child) {
+          border-left: 0;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: $border-radius-lg;
+          border-top-right-radius: $border-radius-lg;
+        }
+      }
+
+      @media screen and (max-width: $size-sm) {
+        flex-direction: column;
+
+        .course-meta-item {
+          &:first-child {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: $border-radius-lg;
+            border-top-right-radius: $border-radius-lg;
+          }
+  
+          &:not(:first-child) {
+            border-left: .05rem solid $border-color;
+            border-top: 0;
+          }
+  
+          &:last-child {
+            border-bottom-left-radius: $border-radius-lg;
+            border-bottom-right-radius: $border-radius-lg;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+
+      .course-meta-header {
+        color: lighten($dark-color, 50%);
+        font-size: .7rem;
+        margin-bottom: .4rem;
+      }
+
+      .course-meta-content {
+        font-size: .8rem;
+      }
+    }
+  }
+
+  .schedule-container {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    .course-schedule {
+      .course-schedule-item {
+        border: .05rem solid $border-color;
+        border-radius: $border-radius-lg;
+        text-align: left;
+        margin-top: 1.2rem;
+        padding: 1.2rem;
+      }
+
+      .course-schedule-header {
+        font-size: .8rem;
+        margin-top: .6rem;
+      }
+    }
+  }
+}
+
+.courses-footer {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
