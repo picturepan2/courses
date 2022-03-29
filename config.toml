@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://ins-courses.vercel.app/'
 languageCode = 'zh-hans'
 title = '初链那件小事 - INS 国际讲座系列 #21'
 theme = "courses"
